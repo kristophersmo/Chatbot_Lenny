@@ -1,8 +1,11 @@
 {"intents": [
   {
     "tag": "hello",
-    "patterns":  [ "Hello", "Hi", "Good day", "What's up", "Hey there" ],
-    "responses": [ "Hello!", "Hey there!", "Hi!", "Good day to you!" ],
+    "patterns":  [ "Hello", "Hi", "Hey", "Good day", "What's up", "Hey there", "Greetings" ],
+    "responses": [ "Hello! I'm your United States geographical helper.",
+                   "Hey there! I'm here to help you learn about the United States.",
+                   "Hi! Go ahead and ask me some questions.",
+                   "Good day to you! I can help you learn about the United States." ],
     "context": ""
   },
   { "tag": "no answer",
@@ -13,7 +16,8 @@
   {
     "tag": "job",
     "patterns": [ "What is your job?", "What is your work?", "What do you do?" ],
-    "responses": [ "My job is to help you get answers.", "I work to help you recall information." ],
+    "responses": [ "My job is to help you get answers about the United States..",
+                   "I work to help you recall information about the United States." ],
     "context": ""
   },
   {
@@ -23,16 +27,16 @@
     "context": ""
   },
   {
-    "tag": "name ask",
-    "patterns": [ "What is your name?", "What can I call you?", "Who are you?" ],
+    "tag": "your name",
+    "patterns": [ "What is your name?", "What's your name?", "What can I call you?", "Who are you?" ],
     "responses": [ "My name is Lenny! Who are you?" ],
     "context": ""
   },
   {
-    "tag": "name response",
-    "patterns": [ "My name is", "I am", "They call me", "Call me" ],
+    "tag": "name",
+    "patterns": [ "My name is", "I am", "I'm", "They call me", "Call me" ],
     "responses": [ "It's a pleasure to meet who I'm serving!" ],
-    "context": "name ask"
+    "context": "your name"
   },
   {
     "tag": "feeling",
@@ -42,13 +46,14 @@
   },
   {
     "tag": "good",
-    "patterns": [ "I am feeling good", "I am fine", "Good to hear", "I am great", "great", "fine" ],
+    "patterns": [ "I am feeling good", "I'm feeling well", "I am fine", "I'm good",
+                  "Good to hear", "I am great", "I'm great", "I am fine", "I'm fine" ],
     "responses": [ "That's perfect!", "Great, so everything's okay." ],
     "context": "feeling"
   },
   {
     "tag": "bad",
-    "patterns": [ "I am feeling bad", "No I am sad", "No", "Not well" ],
+    "patterns": [ "I am feeling bad", "I'm not doing well", "No I am sad", "No", "Not well" ],
     "responses": [ "I hope you feel better soon.", "What can I do to help?" ],
     "context": "feeling"
   },
@@ -56,7 +61,7 @@
     "tag": "actions",
     "patterns": [ "What can you do?", "What can I ask you?", "Can you help me?", "What do you do?" ],
     "responses": [ "I can do a lot of things but my best skill is communicating with you.",
-		   "What do you want to know?" ],
+		           "What do you want to know about the United States?" ],
     "context": ""
   },
   {
@@ -73,7 +78,7 @@
   },
   {
     "tag": "thanks",
-    "patterns": [ "Thank you", "Thank you very much", "Thanks" ],
+    "patterns": [ "Thank you", "Thank you very much", "Thanks", "Gracias" ],
     "responses": [ "You're welcome.", "Any time, friend." ],
     "context": ""
   },
@@ -84,7 +89,7 @@
     "context": ""
   },
   {
-    "tag": "city",
+    "tag": "place located",
     "patterns": [ "Where do you live?", "Where are you located?", "What is your location?", "Where are you?" ],
     "responses": [ "I live in a server located in the United States." ],
     "context": ""
@@ -93,7 +98,7 @@
     "tag": "action",
     "patterns": [ "What are you doing?" ],
     "responses": [ "I'm chatting with you, of course!", "I'm collecting my thoughts.",
-		   "I'm learning about you.", "I'm organizing my records." ],
+		           "I'm looking through my data.", "I'm organizing my records." ],
     "context": ""
   },
   {
@@ -104,20 +109,636 @@
   },
   {
     "tag": "still there",
-    "patterns": [ "Are you still there?", "Are you here?", "Can we please talk?" ],
-    "responses": [ "Yes! I am waiting for you to ask me something." ],
+    "patterns": [ "Are you still there?", "Are you here?", "Can we talk?" ],
+    "responses": [ "Yes! I'm waiting for you to ask me something." ],
     "context": ""
   },
   {
-    "tag": "capital",
-    "patterns": [ "What is the capitol of the United States?" ],
+    "tag": "funny",
+    "patterns": [ "That's funny", "Good one", "Haha", "Nice" ],
+    "responses": [ "Thanks! I try to be as entertaining as I am knowledgeable." ],
+    "context": ""
+  },
+  {
+    "tag": "random fact",
+    "patterns": [ "Random fact", "Tell me something", "What do you know?" ],
+    "responses": [ "The average human head weighs 8 pounds.", "Life is like a box of chocolates.",
+                   "Identical twins don't have the same fingerprints.", "The world's oldest dog lived to 29.5 years.",
+                   "Comets smell like rotten eggs.", "Findland is the happiest country on Earth.",
+                   "You travel 2.5 million kilometers around the sun each day and don't realize it.",
+                   "Animals can be allergic to humans.", "All mammals get goosebumps." ],
+    "context": ""
+  },
+  {
+    "tag": "capital united states",
+    "patterns": [ "What is the capital of the United States?" ],
     "responses": [ "Washington, DC" ],
     "context": ""
   },
   {
-    "tag": "capital",
-    "patterns": [ "What is the capitol of Wisconsin? "],
+    "tag": "capital Alabama",
+    "patterns": [ "What is the capital of Alabama? "],
+    "responses": [ "Montgomery, AL" ],
+    "context": ""
+  },
+  {
+    "tag": "capital Alaska",
+    "patterns": [ "What is the capital of Alaska? "],
+    "responses": [ "Juneau, AK" ],
+    "context": ""
+  },
+  {
+    "tag": "capital Arizona",
+    "patterns": [ "What is the capital of Arizona? "],
+    "responses": [ "Phoenix, AZ" ],
+    "context": ""
+  },
+  {
+    "tag": "capital Arkansas",
+    "patterns": [ "What is the capital of Arkansas? "],
+    "responses": [ "Little Rock, AK" ],
+    "context": ""
+  },
+  {
+    "tag": "capital California",
+    "patterns": [ "What is the capital of California? "],
+    "responses": [ "Sacramento, CA" ],
+    "context": ""
+  },
+  {
+    "tag": "capital Colorado",
+    "patterns": [ "What is the capital of Colorado? "],
+    "responses": [ "Denver, CO" ],
+    "context": ""
+  },
+  {
+    "tag": "capital Connecticut",
+    "patterns": [ "What is the capital of Connecticut? "],
+    "responses": [ "Hartford, CT" ],
+    "context": ""
+  },
+  {
+    "tag": "capital Delaware",
+    "patterns": [ "What is the capital of Delaware? "],
+    "responses": [ "Dover, DE" ],
+    "context": ""
+  },
+  {
+    "tag": "capital Florida",
+    "patterns": [ "What is the capital of Florida? "],
+    "responses": [ "Tallahassee, FL" ],
+    "context": ""
+  },
+  {
+    "tag": "capital Georgia",
+    "patterns": [ "What is the capital of Georgia? "],
+    "responses": [ "Atlanta, GA" ],
+    "context": ""
+  },
+  {
+    "tag": "capital Hawaii",
+    "patterns": [ "What is the capital of Hawaii? "],
+    "responses": [ "Honolulu, HI" ],
+    "context": ""
+  },
+  {
+    "tag": "capital Idaho",
+    "patterns": [ "What is the capital of Idaho? "],
+    "responses": [ "Boise, ID" ],
+    "context": ""
+  },
+  {
+    "tag": "capital Illinois",
+    "patterns": [ "What is the capital of Illinois? "],
+    "responses": [ "Springfield, IL" ],
+    "context": ""
+  },
+  {
+    "tag": "capital Indiana",
+    "patterns": [ "What is the capital of Indiana? "],
+    "responses": [ "Indianapolis, IN" ],
+    "context": ""
+  },
+  {
+    "tag": "capital Iowa",
+    "patterns": [ "What is the capital of Iowa? "],
+    "responses": [ "Des Moines, IA" ],
+    "context": ""
+  },
+  {
+    "tag": "capital Kansas",
+    "patterns": [ "What is the capital of Kansas? "],
+    "responses": [ "Topeka, KS" ],
+    "context": ""
+  },
+  {
+    "tag": "capital Kentucky",
+    "patterns": [ "What is the capital of Kentucky? "],
+    "responses": [ "Frankfort, KY" ],
+    "context": ""
+  },
+  {
+    "tag": "capital Louisiana",
+    "patterns": [ "What is the capital of Louisiana? "],
+    "responses": [ "Baton Rouge, LA" ],
+    "context": ""
+  },
+  {
+    "tag": "capital Maine",
+    "patterns": [ "What is the capital of Maine? "],
+    "responses": [ "Augusta, ME" ],
+    "context": ""
+  },
+  {
+    "tag": "capital Maryland",
+    "patterns": [ "What is the capital of Maryland? "],
+    "responses": [ "Annapolis, MD" ],
+    "context": ""
+  },
+  {
+    "tag": "capital Massachusetts",
+    "patterns": [ "What is the capital of Massachusetts? "],
+    "responses": [ "Boston, MA" ],
+    "context": ""
+  },
+  {
+    "tag": "capital Michigan",
+    "patterns": [ "What is the capital of Michigan? "],
+    "responses": [ "Lansing, MI" ],
+    "context": ""
+  },
+  {
+    "tag": "capital Minnesota",
+    "patterns": [ "What is the capital of Minnesota? "],
+    "responses": [ "Saint Paul, MN" ],
+    "context": ""
+  },
+  {
+    "tag": "capital Mississippi",
+    "patterns": [ "What is the capital of Mississippi? "],
+    "responses": [ "Jackson, MS" ],
+    "context": ""
+  },
+  {
+    "tag": "capital Missouri",
+    "patterns": [ "What is the capital of Missouri? "],
+    "responses": [ "Jefferson City, MO" ],
+    "context": ""
+  },
+  {
+    "tag": "capital Montana",
+    "patterns": [ "What is the capital of Montana? "],
+    "responses": [ "Helena, MT" ],
+    "context": ""
+  },
+  {
+    "tag": "capital Nebraska",
+    "patterns": [ "What is the capital of Nebraska? "],
+    "responses": [ "Lincoln, NE" ],
+    "context": ""
+  },
+  {
+    "tag": "capital Nevada",
+    "patterns": [ "What is the capital of Nevada? "],
+    "responses": [ "Carson City, NV" ],
+    "context": ""
+  },
+  {
+    "tag": "capital New Hampshire",
+    "patterns": [ "What is the capital of New Hampshire? "],
+    "responses": [ "Concord, NH" ],
+    "context": ""
+  },
+  {
+    "tag": "capital New Jersey",
+    "patterns": [ "What is the capital of New Jersey? "],
+    "responses": [ "Trenton, NJ" ],
+    "context": ""
+  },
+  {
+    "tag": "capital New Mexico",
+    "patterns": [ "What is the capital of New Mexico? "],
+    "responses": [ "Sante Fe, NM" ],
+    "context": ""
+  },
+  {
+    "tag": "capital New York",
+    "patterns": [ "What is the capital of New York? "],
+    "responses": [ "Albany, NY" ],
+    "context": ""
+  },
+  {
+    "tag": "capital North Carolina",
+    "patterns": [ "What is the capital of North Carolina? "],
+    "responses": [ "Raleigh, NC" ],
+    "context": ""
+  },
+  {
+    "tag": "capital North Dakota",
+    "patterns": [ "What is the capital of North Dakota? "],
+    "responses": [ "Bismark, ND" ],
+    "context": ""
+  },
+  {
+    "tag": "capital Ohio",
+    "patterns": [ "What is the capital of Ohio? "],
+    "responses": [ "Columbus, OH" ],
+    "context": ""
+  },
+  {
+    "tag": "capital Oklahoma",
+    "patterns": [ "What is the capital of Oklahoma? "],
+    "responses": [ "Oklahoma City, OK" ],
+    "context": ""
+  },
+  {
+    "tag": "capital Oregon",
+    "patterns": [ "What is the capital of Oregon? "],
+    "responses": [ "Salem, OR" ],
+    "context": ""
+  },
+  {
+    "tag": "capital Pennsylvania",
+    "patterns": [ "What is the capital of Pennsylvania? "],
+    "responses": [ "Harrisburg, PA" ],
+    "context": ""
+  },
+  {
+    "tag": "capital Rhode Island",
+    "patterns": [ "What is the capital of Rhode Island? "],
+    "responses": [ "Providence, RI" ],
+    "context": ""
+  },
+  {
+    "tag": "capital South Carolina",
+    "patterns": [ "What is the capital of South Carolina? "],
+    "responses": [ "Columbia, SC" ],
+    "context": ""
+  },
+  {
+    "tag": "capital South Dakota",
+    "patterns": [ "What is the capital of South Dakota? "],
+    "responses": [ "Pierre, SD" ],
+    "context": ""
+  },
+  {
+    "tag": "capital Tennessee",
+    "patterns": [ "What is the capital of Tennessee? "],
+    "responses": [ "Nashville, TN" ],
+    "context": ""
+  },
+  {
+    "tag": "capital Texas",
+    "patterns": [ "What is the capital of Texas? "],
+    "responses": [ "Austin, TX" ],
+    "context": ""
+  },
+  {
+    "tag": "capital Utah",
+    "patterns": [ "What is the capital of Utah? "],
+    "responses": [ "Salt Lake City, UT" ],
+    "context": ""
+  },
+  {
+    "tag": "capital Vermont",
+    "patterns": [ "What is the capital of Vermont? "],
+    "responses": [ "Montpelier, VT" ],
+    "context": ""
+  },
+  {
+    "tag": "capital Virginia",
+    "patterns": [ "What is the capital of Virginia? "],
+    "responses": [ "Richmond, VA" ],
+    "context": ""
+  },
+  {
+    "tag": "capital Washington",
+    "patterns": [ "What is the capital of Washington? "],
+    "responses": [ "Olympia, WA" ],
+    "context": ""
+  },
+  {
+    "tag": "capital West Virginia",
+    "patterns": [ "What is the capital of West Virginia? "],
+    "responses": [ "Charleston, WV" ],
+    "context": ""
+  },
+  {
+    "tag": "capital Wisconsin",
+    "patterns": [ "What is the capital of Wisconsin? "],
     "responses": [ "Madison, WI" ],
+    "context": ""
+  },
+  {
+    "tag": "capital Wyoming",
+    "patterns": [ "What is the capital of Wyoming? "],
+    "responses": [ "Cheyenne, WY" ],
+    "context": ""
+  },
+  {
+    "tag": "population United States",
+    "patterns": [ "What is the population of the United States?" ],
+    "responses": [ "As of 2022, the United States population is 333.3 million." ],
+    "context": ""
+  },
+  {
+    "tag": "population Alabama",
+    "patterns": [ "What is the population of Alabama? "],
+    "responses": [ "As of 2022, the population of Alabama is 5.074 million." ],
+    "context": ""
+  },
+  {
+    "tag": "population Alaska",
+    "patterns": [ "What is the population of Alaska? "],
+    "responses": [ "As of 2022, the population of Alaska is 733,583." ],
+    "context": ""
+  },
+  {
+    "tag": "population Arizona",
+    "patterns": [ "What is the population of Arizona? "],
+    "responses": [ "As of 2022, the population of Arizona is 7.359 million." ],
+    "context": ""
+  },
+  {
+    "tag": "population Arkansas",
+    "patterns": [ "What is the population of Arkansas? "],
+    "responses": [ "As of 2022, the population of Arkansas is 3.046 million." ],
+    "context": ""
+  },
+  {
+    "tag": "population California",
+    "patterns": [ "What is the population of California? "],
+    "responses": [ "As of 2022, the population of California is 39.03 million." ],
+    "context": ""
+  },
+  {
+    "tag": "population Colorado",
+    "patterns": [ "What is the population of Colorado? "],
+    "responses": [ "As of 2022, the population of Colorado is 5.84 million." ],
+    "context": ""
+  },
+  {
+    "tag": "population Connecticut",
+    "patterns": [ "What is the population of Connecticut? "],
+    "responses": [ "As of 2022, the population of Connecticut is 3.626 million." ],
+    "context": ""
+  },
+  {
+    "tag": "population Delaware",
+    "patterns": [ "What is the population of Delaware? "],
+    "responses": [ "As of 2022, the population of Delaware is 1.018 million." ],
+    "context": ""
+  },
+  {
+    "tag": "population Florida",
+    "patterns": [ "What is the population of Florida? "],
+    "responses": [ "As of 2022, the population of Florida is 22.24 million." ],
+    "context": ""
+  },
+  {
+    "tag": "population Georgia",
+    "patterns": [ "What is the population of Georgia? "],
+    "responses": [ "As of 2022, the population of Georgia is 10.91 million." ],
+    "context": ""
+  },
+  {
+    "tag": "population Hawaii",
+    "patterns": [ "What is the population of Hawaii? "],
+    "responses": [ "As of 2022, the population of Hawaii is 1.44 million." ],
+    "context": ""
+  },
+  {
+    "tag": "population Idaho",
+    "patterns": [ "What is the population of Idaho? "],
+    "responses": [ "As of 2022, the population of Idaho is 1.939 million." ],
+    "context": ""
+  },
+  {
+    "tag": "population Illinois",
+    "patterns": [ "What is the population of Illinois? "],
+    "responses": [ "As of 2022, the population of Illinois is 12.58 million." ],
+    "context": ""
+  },
+  {
+    "tag": "population Indiana",
+    "patterns": [ "What is the population of Indiana? "],
+    "responses": [ "As of 2022, the population of Indiana is 6.833 million." ],
+    "context": ""
+  },
+  {
+    "tag": "population Iowa",
+    "patterns": [ "What is the population of Iowa? "],
+    "responses": [ "As of 2022, the population of Iowa is 3.201 million." ],
+    "context": ""
+  },
+  {
+    "tag": "population Kansas",
+    "patterns": [ "What is the population of Kansas? "],
+    "responses": [ "As of 2022, the population of Kansas is 2.937 million." ],
+    "context": ""
+  },
+  {
+    "tag": "population Kentucky",
+    "patterns": [ "What is the population of Kentucky? "],
+    "responses": [ "As of 2022, the population of Kentucky is 4.512 million." ],
+    "context": ""
+  },
+  {
+    "tag": "population Louisiana",
+    "patterns": [ "What is the population of Louisiana? "],
+    "responses": [ "As of 2022, the population of Louisiana is 4.59 million." ],
+    "context": ""
+  },
+  {
+    "tag": "population Maine",
+    "patterns": [ "What is the population of Maine? "],
+    "responses": [ "As of 2022, the population of Maine is 1.385 million." ],
+    "context": ""
+  },
+  {
+    "tag": "population Maryland",
+    "patterns": [ "What is the population of Maryland? "],
+    "responses": [ "As of 2022, the population of Maryland is 6.165 million." ],
+    "context": ""
+  },
+  {
+    "tag": "population Massachusetts",
+    "patterns": [ "What is the population of Massachusetts? "],
+    "responses": [ "As of 2022, the population of Massachusetts is 6.982 million." ],
+    "context": ""
+  },
+  {
+    "tag": "population Michigan",
+    "patterns": [ "What is the population of Michigan? "],
+    "responses": [ "As of 2022, the population of Michigan is 10.03 million." ],
+    "context": ""
+  },
+  {
+    "tag": "population Minnesota",
+    "patterns": [ "What is the population of Minnesota? "],
+    "responses": [ "As of 2022, the population of Minnesota is 5.717 million." ],
+    "context": ""
+  },
+  {
+    "tag": "population Mississippi",
+    "patterns": [ "What is the population of Mississippi? "],
+    "responses": [ "As of 2022, the population of Mississippi is 2.94 million." ],
+    "context": ""
+  },
+  {
+    "tag": "population Missouri",
+    "patterns": [ "What is the population of Missouri? "],
+    "responses": [ "As of 2022, the population of Missouri is 6.178 million." ],
+    "context": ""
+  },
+  {
+    "tag": "population Montana",
+    "patterns": [ "What is the population of Montana? "],
+    "responses": [ "As of 2022, the population of Montana is 1.123 million." ],
+    "context": ""
+  },
+  {
+    "tag": "population Nebraska",
+    "patterns": [ "What is the population of Nebraska? "],
+    "responses": [ "As of 2022, the population of Nebraska is 1.968 million." ],
+    "context": ""
+  },
+  {
+    "tag": "population Nevada",
+    "patterns": [ "What is the population of Nevada? "],
+    "responses": [ "As of 2022, the population of Nevada is 3.178 million." ],
+    "context": ""
+  },
+  {
+    "tag": "population New Hampshire",
+    "patterns": [ "What is the population of New Hampshire? "],
+    "responses": [ "As of 2022, the population of New Hampshire is 1.395 million." ],
+    "context": ""
+  },
+  {
+    "tag": "population New Jersey",
+    "patterns": [ "What is the population of New Jersey? "],
+    "responses": [ "As of 2022, the population of New Jersey is 9.262 million." ],
+    "context": ""
+  },
+  {
+    "tag": "population New Mexico",
+    "patterns": [ "What is the population of New Mexico? "],
+    "responses": [ "As of 2022, the population of New Mexico is 2.113 million." ],
+    "context": ""
+  },
+  {
+    "tag": "population New York",
+    "patterns": [ "What is the population of New York? "],
+    "responses": [ "As of 2022, the population of New York is 19.68 million." ],
+    "context": ""
+  },
+  {
+    "tag": "population North Carolina",
+    "patterns": [ "What is the population of North Carolina? "],
+    "responses": [ "As of 2022, the population of North Carolina is 10.7 million." ],
+    "context": ""
+  },
+  {
+    "tag": "population North Dakota",
+    "patterns": [ "What is the population of North Dakota? "],
+    "responses": [ "As of 2022, the population of North Dakota is 779,261." ],
+    "context": ""
+  },
+  {
+    "tag": "population Ohio",
+    "patterns": [ "What is the population of Ohio? "],
+    "responses": [ "As of 2022, the population of Ohio is 11.76 million." ],
+    "context": ""
+  },
+  {
+    "tag": "population Oklahoma",
+    "patterns": [ "What is the population of Oklahoma? "],
+    "responses": [ "As of 2022, the population of Oklahoma is 4.02 million." ],
+    "context": ""
+  },
+  {
+    "tag": "population Oregon",
+    "patterns": [ "What is the population of Oregon? "],
+    "responses": [ "As of 2022, the population of Oregon is 4.24 million." ],
+    "context": ""
+  },
+  {
+    "tag": "population Pennsylvania",
+    "patterns": [ "What is the population of Pennsylvania? "],
+    "responses": [ "As of 2022, the population of Pennsylvania is 12.97 million." ],
+    "context": ""
+  },
+  {
+    "tag": "population Rhode Island",
+    "patterns": [ "What is the population of Rhode Island? "],
+    "responses": [ "As of 2022, the population of Rhode Island is 1.094 million." ],
+    "context": ""
+  },
+  {
+    "tag": "population South Carolina",
+    "patterns": [ "What is the population of South Carolina? "],
+    "responses": [ "As of 2022, the population of South Carolina is 5.283 million." ],
+    "context": ""
+  },
+  {
+    "tag": "population South Dakota",
+    "patterns": [ "What is the population of South Dakota? "],
+    "responses": [ "As of 2022, the population of South Dakota is 909,824." ],
+    "context": ""
+  },
+  {
+    "tag": "population Tennessee",
+    "patterns": [ "What is the population of Tennessee? "],
+    "responses": [ "As of 2022, the population of Tennessee is 7.051 million." ],
+    "context": ""
+  },
+  {
+    "tag": "population Texas",
+    "patterns": [ "What is the population of Texas? "],
+    "responses": [ "As of 2022, the population of Texas is 30.03 million." ],
+    "context": ""
+  },
+  {
+    "tag": "population Utah",
+    "patterns": [ "What is the population of Utah? "],
+    "responses": [ "As of 2022, the population of Utah is 3.381 million." ],
+    "context": ""
+  },
+  {
+    "tag": "population Vermont",
+    "patterns": [ "What is the population of Vermont? "],
+    "responses": [ "As of 2022, the population of Vermont is 647,064." ],
+    "context": ""
+  },
+  {
+    "tag": "population Virginia",
+    "patterns": [ "What is the population of Virginia? "],
+    "responses": [ "As of 2022, the population of Virginia is 8.684 million." ],
+    "context": ""
+  },
+  {
+    "tag": "population Washington",
+    "patterns": [ "What is the population of Washington? "],
+    "responses": [ "As of 2022, the population of Washington is 7.786 million." ],
+    "context": ""
+  },
+  {
+    "tag": "population West Virginia",
+    "patterns": [ "What is the population of West Virginia? "],
+    "responses": [ "As of 2022, the population of West Virginia is 1.775 million." ],
+    "context": ""
+  },
+  {
+    "tag": "population Wisconsin",
+    "patterns": [ "What is the population of Wisconsin? "],
+    "responses": [ "As of 2022, the population of Wisconsin is 5.893 million." ],
+    "context": ""
+  },
+  {
+    "tag": "population Wyoming",
+    "patterns": [ "What is the population of Wyoming? "],
+    "responses": [ "As of 2022, the population of Wyoming is 581,381." ],
     "context": ""
   }
    ]
